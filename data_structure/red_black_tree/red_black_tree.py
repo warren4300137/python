@@ -30,7 +30,7 @@ class RedBlackTree:
     def inorder(self) -> List[int]:
         return self._inorder(self.root)
 
-    def levelOrder(self) -> List[int]:
+    def level_order(self) -> List[int]:
         ret = []
 
         if not self.root:
@@ -232,4 +232,4 @@ if __name__ == '__main__':
     rb_tree.insert(1)
 
     print(rb_tree.inorder())
-    print(rb_tree.levelOrder())
+    print(rb_tree.level_order())

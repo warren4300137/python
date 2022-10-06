@@ -14,7 +14,7 @@ class TestRedBlackTree(unittest.TestCase):
         expect_level_order = []
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
     
     def test_insert_case_1(self):
         expect_in_order = [1]
@@ -23,7 +23,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(1)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
         self.assertTrue(self.rb.root.color == 'B')
 
     def test_insert_case_2(self):
@@ -34,7 +34,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(2)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
         self.assertTrue(self.rb.root.color == 'B')
         self.assertTrue(self.rb.root.right.color == 'R')
 
@@ -47,7 +47,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(3)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
         self.assertTrue(self.rb.root.color == 'B')
         self.assertTrue(self.rb.root.left.color == 'R')
         self.assertTrue(self.rb.root.right.color == 'R')
@@ -62,7 +62,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(4)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
         self.assertTrue(self.rb.root.color == 'B')
         self.assertTrue(self.rb.root.left.color == 'B')
         self.assertTrue(self.rb.root.right.color == 'B')
@@ -79,7 +79,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(5)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
         self.assertTrue(self.rb.root.color == 'B')
         self.assertTrue(self.rb.root.left.color == 'B')
         self.assertTrue(self.rb.root.right.color == 'B')
@@ -98,7 +98,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(1)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
 
     def test_insert_case_large_2(self):
         expect_in_order = [1, 2, 3, 4, 5, 6, 7]
@@ -113,7 +113,7 @@ class TestRedBlackTree(unittest.TestCase):
         self.rb.insert(7)
 
         self.assertEqual(expect_in_order, self.rb.inorder())
-        self.assertEqual(expect_level_order, self.rb.levelOrder())
+        self.assertEqual(expect_level_order, self.rb.level_order())
 
 if __name__=='__main__':
     unittest.main()
